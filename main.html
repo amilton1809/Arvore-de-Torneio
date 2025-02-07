@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Torneio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="tournament">
+    <!-- Final -->
+    <h1>CAMPEÃO</h1>
+    <div class="round">
+        <div class="match"></div>
+    </div>
+    
+    <!-- Semifinais -->
+    <div class="round">
+        <div class="match"></div>
+        <div class="match"></div>
+    </div>
+
+    <!-- Quartas de Final -->
+    <div class="round">
+        <div class="match">Santos</div>
+        <div class="match">Palmeiras</div>
+        <!-- Linha inclinada à esquerda -->
+        <div class="connector left-inclined"></div>
+        <!-- Linha inclinada à direita -->
+        <div class="connector right-inclined"></div>
+        <div class="match">São Paulo</div>
+        <div class="match">Corinthias</div>
+    </div>
+
+    <!-- Conexões para o Campeão -->
+    <div class="round">
+        <!-- Linha inclinada do Vencedor 1 para o Campeão -->
+        <div class="connector left-to-champion"></div>
+        <!-- Linha inclinada do Vencedor 2 para o Campeão -->
+        <div class="connector right-to-champion"></div>
+    </div>
+
+    <!-- Linhas verticais para os vencedores -->
+    <div class="round">
+        <!-- Linha vertical para o Vencedor 1 -->
+        <div class="connector vertical-left"></div>
+        <!-- Linha vertical para o Vencedor 2 -->
+        <div class="connector vertical-right"></div>
+    </div>
+</div>
+
+</body>
+</html>

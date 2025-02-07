@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+.tournament {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.round {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+.match {
+    width: 120px;
+    height: 40px;
+    background: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    margin: 10px;
+}
+.connector {
+    position: absolute;
+    background: black;
+}
+/* Linha inclinada à esquerda (apontando para o Vencedor 1) */
+.left-inclined {
+    width: 50px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: -7px; /* Centralizada acima do Jogador A */
+    left: 16%; /* Ajustado para não invadir o Vencedor 1 */
+    transform: rotate(-45deg); /* Aponta para o Vencedor 1 */
+    transform-origin: top left;
+}
+/* Linha inclinada à direita (apontando para o Vencedor 2) */
+.right-inclined {
+    width: 50px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: -7px; /* Centralizada acima do Jogador D */
+    left: 74%; /* Ajustado para centralizar mais próximo do Jogador D */
+    transform: rotate(45deg); /* Aponta para o Vencedor 2 */
+    transform-origin: top right;
+}
+/* Linha inclinada do Vencedor 1 para o Campeão */
+.left-to-champion {
+    width: 50px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: -203px; /* Ajustado para ficar acima do Vencedor 1 */
+    left: calc(12% - 70px); /* Moveu para a esquerda, agora está 50px mais à esquerda */
+    transform: rotate(-45deg); /* Aponta para o Campeão */
+    transform-origin: top left;
+}
+/* Linha inclinada do Vencedor 2 para o Campeão */
+.right-to-champion {
+    width: 50px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: -202px; /* Ajustado para ficar acima do Vencedor 2 */
+    left: calc(86% + 20px); /* Moveu para a direita, agora está 10px mais à direita */
+    transform: rotate(45deg); /* Aponta para o Campeão */
+    transform-origin: top right;
+}
+/* Linha vertical para o Vencedor 1 */
+.vertical-left {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    top: -180px; /* Ajustado para centralizar acima do Jogador B */
+    left: calc(12% - 72px); /* Centralizado acima do Jogador B */
+}
+/* Linha vertical para o Vencedor 2 */
+.vertical-right {
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    top: -180px; /* Ajustado para centralizar acima do Jogador C */
+    left: calc(86% + 68px); /* Centralizado acima do Jogador C */
+}
